@@ -13,6 +13,7 @@
     <script src="app/identifier/identifier.service.js"></script>
     <script src="app/filters/filters.module.js"></script>
     <script src="app/filters/toCamelCaseUpperSample.filter.js"></script>
+
 </head>
 <body ng-controller="AppController as vm">
     <div class="container-fluid">
@@ -22,15 +23,19 @@
                 <th>String to Test</th>
                 <th>Original Case Type</th>
                 <th>Sample Filter</th>
+                <th>Converted Test</th>
             </thead>
             <tbody>
                 <tr ng-repeat="test in vm.tests">
                     <td><span ng-bind="test"></span></td>
                     <td><span ng-bind="vm.identifier.getCaseType(test)"></span></td>
                     <td><span ng-bind="test | toCamelcaseUpperSample"></span></td>
+                    <td><span ng-bind="test | toCamelcaseLower"></span></td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <script src="app/filters/toCamelCaseLower.js"></script>
 </body>
+
 </html>
