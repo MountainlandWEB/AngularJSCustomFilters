@@ -13,6 +13,7 @@
     <script src="app/identifier/identifier.service.js"></script>
     <script src="app/filters/filters.module.js"></script>
     <script src="app/filters/toCamelCaseUpperSample.filter.js"></script>
+    <script src="app/filters/snake_case_underscores_lower.js"></script>
 </head>
 <body ng-controller="AppController as vm">
     <div class="container-fluid">
@@ -22,12 +23,14 @@
                 <th>String to Test</th>
                 <th>Original Case Type</th>
                 <th>Sample Filter</th>
+                <th>Snake Case Lower Filter</th>
             </thead>
             <tbody>
                 <tr ng-repeat="test in vm.tests">
                     <td><span ng-bind="test"></span></td>
                     <td><span ng-bind="vm.identifier.getCaseType(test)"></span></td>
                     <td><span ng-bind="test | toCamelcaseUpperSample"></span></td>
+                    <td><span ng-bind="test | to_snake_case_underscores_lower"></span></td>
                 </tr>
             </tbody>
         </table>
