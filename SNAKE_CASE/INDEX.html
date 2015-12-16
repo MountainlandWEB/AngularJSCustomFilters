@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <h1>Directive Test 1</h1>
+    <input type="search" name="search" ng-model="search" placeholder="Search a person" id="">
+    <div class="list" ng-controller="List">
+        <ul>
+            <li ng-repeat="person in people | filter:search:comparatorFunction">
+        </ul>
+    </div>
+</div>
+<script>
+    var List = function($scope){
+        $scope.people = [
+            {name:'Mo',age:20},
+            {name:'Si', age:22},
+            {name:'Yo', age:33}
+        ]
+    };
+    $scope.comparatorFunction = function (name, search) {
+        return (''+name).indexOf(''+search) > -1;
+    };
+</script>
+</body>
+</html>
