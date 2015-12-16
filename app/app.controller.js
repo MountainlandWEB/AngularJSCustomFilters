@@ -1,5 +1,5 @@
 (function() {
-    "use stritc";
+    "use strict";
 
     angular
         .module('app')
