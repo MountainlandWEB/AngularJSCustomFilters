@@ -1,5 +1,5 @@
 (function() {
-    "use stritc";
+    "use strict";
 
     angular
         .module('app.filters')
@@ -10,7 +10,8 @@
     function toCamelcaseUpperSample() {
         return function(input) {
             //TODO: implement
-            return "[ " + input + " ]";
+            if(input)
+            return  input ;
         }
     }
 
