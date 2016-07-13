@@ -5,12 +5,12 @@
         .module('app')
         .controller('AppController', AppController);
 
-    AppController.$inject = ['tests', 'IdentifierService'];
+    AppController.$inject = ['tests', 'CaseConverterService'];
 
-    function AppController(tests, IdentifierService) {
+    function AppController(tests, CaseConverterService) {
         var vm = this;
         vm.tests = tests;
-        vm.identifier = IdentifierService;
+        vm.caseConverter = CaseConverterService;
     }
 
 })();
