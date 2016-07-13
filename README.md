@@ -1,4 +1,4 @@
-# AngularJSCustomFiltersContest
+# AngularJSCustomFilters
 
 ## Mini Project: Case Conversion Filters
 
